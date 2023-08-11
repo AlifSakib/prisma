@@ -15,9 +15,6 @@ async function main() {
   //   },
   // });
   // console.log(postUser);
-  app.get("/", (req, res) => {
-    res.send("Hello World");
-  });
 
   app.listen(port, () => {
     console.log(`Server Runing at PORT ${port}`);
