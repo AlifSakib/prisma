@@ -11,6 +11,6 @@ app.use(
   })
 );
 
-app.use("/api/v1", UserRoutes);
+app.use("/api/v1/user", UserRoutes);
 
 export default app;
