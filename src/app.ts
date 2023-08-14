@@ -1,6 +1,7 @@
 import cors from "cors";
 import express, { Application } from "express";
 import { CategoryRoutes } from "./modules/category/category.route";
+import { PostRoute } from "./modules/post/post.route";
 import { UserRoutes } from "./modules/user/user.route";
 
 const app: Application = express();
@@ -14,5 +15,6 @@ app.use(
 
 app.use("/api/v1/user", UserRoutes);
 app.use("/api/v1/category", CategoryRoutes);
+app.use("/api/v1/post", PostRoute);
 
 export default app;
