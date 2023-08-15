@@ -45,14 +45,15 @@ const getSingleUser = async (id: number) => {
 };
 
 const getUsers = async () => {
-  const result = await prisma.user.findMany({
-    // select: {
-    //   email: true,
-    // },
-    include: {
-      profile: true,
-    },
-  });
+  // const result = await prisma.user.findMany({
+  //   // select: {
+  //   //   email: true,
+  //   // },
+  //   include: {
+  //     profile: true,
+  //   },
+  // });
+  const result = await prisma.$queryRaw`select * from users`;
   return result;
 };
 
